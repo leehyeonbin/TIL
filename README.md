@@ -1,3 +1,3 @@
 # TIL
 ## Android
-[안드로이드](https://github.com/leehyeonbin/FunctionTest)
+[안드로이드](https://github.com/leehyeonbin/TIL/tree/main/Android)
