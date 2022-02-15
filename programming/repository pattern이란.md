@@ -33,6 +33,15 @@ ViewModel은 필요한 데이터를 Repository에 요청하고 Repository는 적
 
 ![repository](../img/repository_pattern.png)
 
+## 장점
+    하나의 도메인을 표현하는데 필요한 DataSource가 몇 개 든 client 쪽에서는 이를 알 필요가 없다. 따라서 DataSource가 새롭게 추가되는 것에 대한 부담이 없다.
+    DataSource의 변경이 발생하더라도 repository 외부 layer로 전파되지 않는다.
+    client는 repository 인터페이스에 의존하기 때문에 테스트하기 용이하다.
+    결국 repository는 presentation layer 와 data layer 의 Coupling(결합도)를 느슨하게 만들어준다.
+    중간에 추상화된 레이어로서 Repository 클래스를 두어 모듈화가 명확해지고, 유지보수성이 향상된다.
+
+## 단점
+    추상레이어가 하나 추가되는 것이므로 관리해야 할 코드와 파일들이 많아진다.
 
 출처 : 
 * [[Design Pattern]Repository Pattern 이란](https://4z7l.github.io/2020/11/24/repository-pattern.html)
