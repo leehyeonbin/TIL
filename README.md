@@ -1,6 +1,10 @@
 # TIL
 ## Android
 * [dp란](https://github.com/leehyeonbin/TIL/blob/main/Android/dp(dpi)%EB%9E%80.md)
+* [shared preference란]()
 ## Programming
 * [singleton이란](https://github.com/leehyeonbin/TIL/blob/main/programming/singleton.md)
 * [synchronized란](https://github.com/leehyeonbin/TIL/blob/main/programming/synchronized%EB%9E%80.md)
+* [coupling(결합도)란]()
+* [repository pattern이란]()
+* [factory pattern]()
