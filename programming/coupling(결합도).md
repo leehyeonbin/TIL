@@ -61,6 +61,17 @@ public void sendEmail(Person person) {
 }
 ```
 
+```kotlin
+public fun foo () {
+    val p = Person("이현빈", "abc@abc.com")
+    sendEmail(p)
+}
+
+public fun sendEmail(Person person) {
+    // 메일 발송 로직
+}
+```
+
 ## 제어 결합도(Control Coupling)
     어떤 모듈이 다른 모듈 내부의 논리적인 흐름을 제어하는 요소를 전달하는 경우를 말한다. 예를 들면, 파라미터로 전달되는 값에 따라서 모듈 내부 로직의 처리가 달라지는 Flag 값 등으로 결합되는 형태다.
 
