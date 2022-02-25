@@ -91,3 +91,17 @@ public void printCharge(boolean isMember) {
     }
 }
 ```
+
+```kotlin
+public fun foo() {
+    printCharge(true)
+}
+
+public fun printCharge(boolean isMember) {
+    if (isMember) {
+        printMemberCharge()
+    } else {
+        printNormalCharge()
+    }
+}
+```
