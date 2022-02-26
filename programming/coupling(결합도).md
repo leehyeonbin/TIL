@@ -107,7 +107,33 @@ public fun printCharge(boolean isMember) {
 ```
 
 ## 외부 결합도(External Coupling)
-모듈이 외부에 있는 다른 모듈 또는 데이터를 참조할 때의 결합 형태를 말한다.
+    모듈이 외부에 있는 다른 모듈 또는 데이터를 참조할 때의 결합 형태를 말한다.
+    
 ![external coupling](../img/external_coupling_img.jpg)
 
 외부 결합도는 모듈의 외부의 데이터, 통신 프로토콜 등을 공유할 때 발생한다. 데이터를 참조 또는 공유하는 결합 형태가 이어서 살펴볼 공통 결합과 비슷하기 때문에 외부 결합도에 대한 설명이 생략되는 경우도 있지만 다른 점은 참조하는 데이터가 외부에 위치하는 것이다.
+
+## 공동 결합도 (Common Coupling) 
+    여러 모듈이 하나의 데이터 영역을 참조하여 사용하는 형태다. 전역 변수(global variable)를 예로 들 수 있다. 전역 변수의 변경이 여러 모듈에 영향을 끼칠 수 있다.
+![common coupling](../img/commom_coupling_img.jpg)
+
+공통 결합도의 코드 예제는 아래와 같은 형태다. 전역으로 선언된 변수를 서로 다른 모듈에서 참조하는 경우다. 자바 언어를 예로 들었을 때, 클래스 변수와 인스턴스 변수를 사용하여 조작하는 경우다.
+
+```java
+class Example {
+    // 클래스 변수, 다른 클래스에서 호출 가능
+    static int a = 5;
+    // 인스턴스 변수, 같은 클래스에서 호출 가능
+    int b = 2;
+}
+
+public void methodA() {
+    // a 또는 b 값 참조
+
+}
+
+public void methodB() {
+    // a 또는 b 값 참조
+}
+```
+
