@@ -105,3 +105,9 @@ public fun printCharge(boolean isMember) {
     }
 }
 ```
+
+## 외부 결합도(External Coupling)
+모듈이 외부에 있는 다른 모듈 또는 데이터를 참조할 때의 결합 형태를 말한다.
+![external coupling](../img/external_coupling_img.jpg)
+
+외부 결합도는 모듈의 외부의 데이터, 통신 프로토콜 등을 공유할 때 발생한다. 데이터를 참조 또는 공유하는 결합 형태가 이어서 살펴볼 공통 결합과 비슷하기 때문에 외부 결합도에 대한 설명이 생략되는 경우도 있지만 다른 점은 참조하는 데이터가 외부에 위치하는 것이다.
