@@ -8,4 +8,5 @@
 * [coupling(결합도)란](https://github.com/leehyeonbin/TIL/blob/main/programming/coupling(%EA%B2%B0%ED%95%A9%EB%8F%84).md)
 * [repository pattern이란](https://github.com/leehyeonbin/TIL/blob/main/programming/repository%20pattern%EC%9D%B4%EB%9E%80.md)
 * [factory pattern](https://github.com/leehyeonbin/TIL/blob/main/programming/factory_pattern.md)
+* [mvp pattern](https://github.com/leehyeonbin/TIL/blob/main/programming/mvp%20pattern.md)
 * [moudule](https://github.com/leehyeonbin/TIL/blob/main/programming/module.md)
