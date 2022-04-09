@@ -10,3 +10,4 @@
 * [factory pattern](https://github.com/leehyeonbin/TIL/blob/main/programming/factory_pattern.md)
 * [mvp pattern](https://github.com/leehyeonbin/TIL/blob/main/programming/mvp%20pattern.md)
 * [moudule](https://github.com/leehyeonbin/TIL/blob/main/programming/module.md)
+* [다형성](https://github.com/leehyeonbin/TIL/blob/main/programming/%EB%8B%A4%ED%98%95%EC%84%B1(Polylmorphism).md)
