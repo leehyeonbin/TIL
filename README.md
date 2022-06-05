@@ -14,5 +14,4 @@
 * [lazy, lateinit](https://github.com/leehyeonbin/TIL/blob/main/kotlin/lazy%2C%20lateinit.md)
 
 > 2022 2월 ~
-> 시간 남을 때 항상 기록하기
-> 최대한 자세하게 
+> 시간 남을 때 항상 최대한 
