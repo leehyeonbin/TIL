@@ -121,3 +121,8 @@ personList.filter {it.age == maxAge } // 외부에서 maxBy를 사용하는 비�
 
 ## 결론
 >filter 를 굳이 이용하지 않아도 얼마든지 구현이 가능하고, 항상 그렇게 했었지만, 코드가 길어지고 커질수록 코드가 복잡하고 이해하기 어려뤄지니 Kotlin에서는 코틀린다운 편리한 기능들을 알아서 코딩하는 것이 좋을 것 같다.
+
+### 출처
+* [[Kotlin] 코틀린 Collection 에서 사용하는 Filter 함수
+](https://blog.yena.io/studynote/2020/01/22/Kotlin-Collection-Filter.html)
+* [코틀린(Kotlin) - 컬렉션 API : filter, map, all, any, count, find, groupBy, flatMap, flatten](https://0391kjy.tistory.com/38)
