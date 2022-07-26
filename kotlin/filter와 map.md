@@ -2,6 +2,7 @@
 코틀린의 장점 중 하나는 자바에서는 아마 대부분 수작업으로 해야 했던 부분들을 기본적으로 제공해 준다는 것이다. 그 중에서도 **filter** 와 **map** 등의 함수들은  조금 더 코틀린스러운 코딩을 할 수 있도록 한다.
 ___
 
+## Filter
 ### 먼저 예시로 리스트를 만들어 준다.
 ```kotlin
 val list = {"chicken", "pizza", "pasta", "hambuger"}
@@ -74,6 +75,49 @@ anyList.filterIsInstance<String>().filter {
 }
 // ["chicken"]
 ```
+---
+## Map
+### 연산
+map 함수는 각 원소에 원하는 형태(연산)로 변환하는 기능을 하고, 변환된 값들을 모아서 컬렉션을 새로 만든다. 결과는 처음 리스트와 원소 개수는 같지만, 각 원소는 주어진 함수에 따라 새로운 컬렉션이 된다.
+```kotlin
+val list = [1 ,2 ,3 ,4]
+val afterList = list.map { it * it }
+// [1 ,4 ,9 ,16]
+```
+
+### 변환
+```kotlin
+val personList = listOf(Person("코틀린", 18), Person("안드로이드", 20))
+println(personList.map {it.name})
+// [안드로이드, 코틀린]
+```
+
+```kotlin
+personList.map(Person::name) // 이런식으로 멤버 참조 문법도 가능하고
+```
+
+이런식으로 함수를을 사용할 경우에 예를 들면 나이가 20이상인 사람의 이름만 가져오기
+```kotlin
+personList.filter{it.age >= 20}.map(Person::name)
+// ["안드로이드"]
+```
+
+이런식으로 멋진 코드들이 가능하다.
+
+### 괜찮은 코드
+나이가 가장 많은 사람을 불러오는 코드를 작성해보자
+```kotlin
+personList.filter{ it.age == personList.maxBy(Person::age)!!.age } 
+// 내부에서 MaxBy를 이용하는 비효율적인 코드이다.
+
+val maxAge = personList.maxBy(Person::age)!!.age
+personList.filter {it.age == maxAge } // 외부에서 maxBy를 사용하는 비교적 효율적인 코드이다.
+```
+
+위에 코드를 보면 첫 번째 코드에는 maxBy를 **내부**에서 실행하여 연산을 모든 값들이 실행되는 동안 계속 실행해야 한다. 하지만 두 번째 코드는 maxBy를 **외부**에서 사용하여 1번만 사용하고, 그 값에 필터링을 한다.
+
+> 여기서 알 수있는 점은 무작정 코드를 줄인다고 해서 다 좋은 것이 아니라는 것이다. 어떤식으로 코드가 구동되는지 잘 확인하고 작성해아한다.
+
 
 ## 결론
-filter 를 굳이 이용하지 않아도 얼마든지 구현이 가능하고, 항상 그렇게 했었지만, 코드가 길어지고 커질수록 코드가 복잡하고 이해하기 어려뤄지니 Kotlin에서는 코틀린다운 편리한 기능들을 알아서 코딩하는 것이 좋을 것 같다.
+>filter 를 굳이 이용하지 않아도 얼마든지 구현이 가능하고, 항상 그렇게 했었지만, 코드가 길어지고 커질수록 코드가 복잡하고 이해하기 어려뤄지니 Kotlin에서는 코틀린다운 편리한 기능들을 알아서 코딩하는 것이 좋을 것 같다.
