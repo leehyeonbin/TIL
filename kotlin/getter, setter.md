@@ -89,3 +89,26 @@ val로 선언한 속성은??
 ![attribute](../img/attribute.png)
 
 당연한 상황이지만 읽기는 가능하지만 값을 변경하려하자 에러를 표기한다.
+
+## Custom getter & setter
+물론 getter와 setter를 커스텀하여 호출할 때 특정 연산을 실행할수도 있다.
+```kotlin
+class Person(name: String, age: Int) {
+        var name: String = name
+            get() = name
+            set(value) {
+                field = value
+            }
+        var age: Int = age
+            get() {
+                return age + 10
+            }
+            set(value){
+                field = value
+            }
+
+    }
+```
+
+### 출처
+* [[Kotlin] 클래스 Getter & Setter](https://any-ting.tistory.com/63#recentEntries)
